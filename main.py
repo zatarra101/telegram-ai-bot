@@ -26,7 +26,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     try:
         response = client.chat.completions.create(
-            model="google/gemini-2.0-flash-001",
+            model="openrouter/free",
             messages=[{"role": "user", "content": user_text}]
         )
         ai_reply = response.choices[0].message.content
