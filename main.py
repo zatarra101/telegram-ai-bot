@@ -28,7 +28,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Route specifically to OpenRouter's 100% free models
         response = client.chat.completions.create(
-            model="openrouter/free",
+            model="google/gemma-4-26b-a4b-it:free",
             messages=[{"role": "user", "content": user_text}]
         )
         ai_reply = response.choices[0].message.content
